@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora&family=Poppins&family=Roboto&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Lora', serif;
+}
+
+.imgHome {
+    background-image: url('windowpic1.jpg');
+    width: 100%;
+    height: 800px;
+    background-attachment: fixed;
+}
+
+.bannerMenu {
+    background-color: rgba(255, 255, 255, 0.5);
+    width: 100%;
+    height: 150px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.bannerMenu .logo {
+    width: 150px;
+    height: 150px;
+}
+
+.bannerMenu button{
+    font-family: 'Poppins', sans-serif;
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+    cursor: pointer;
+    height: 150px;
+    margin-right: 70px;
+    font-weight: bold;
+}
+
+.bannerMenu button:hover{
+    color: rgb(110, 110, 110)
+}
+
+.titleHome {
+    font-family: 'Poppins', sans-serif;
+    margin-left: 20%;
+    display: flex;
+    height: 600;
+    flex-direction: column-reverse;
+    align-self: flex-end;
+}
+
+.titleHome h1 {
+    font-size: 40px;
+}
+
+.titleHome h3{
+    font-size: 20px;
+}
+
+.section {
+    margin-left: 15%;
+    margin-right: 15%;
+    font-size: large;
+    margin-top: 4%;
+    line-height: 200%;
+}
+
+.section h1 {
+    font-family: 'Poppins', sans-serif;
+}
+
+.firstSection {
+    display: flex;
+}
+
+.firstSection img {
+    width: 100%;
+}
+
+.column {
+    padding: 1%;
+}
+
+.firstColumn {
+    max-width: 50%;
+}
+
+ul {
+    list-style-type: circle;
+}
+
+.secondColumn {
+    max-width: 50%;
+    margin-left: 5%;
+}
+
+.beneficios {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.sectionTitle {
+    display: flex;
+    justify-content: center;
+}
+
+.card img {
+    width: 55%;
+}
+
+.card {
+    display: flex;
+    justify-content: center;
+    margin: 5%;
+}
+
+.firstCard .text {
+    margin-left: 4%;
+}
+
+.secondCard .text {
+    margin-right: 4%;
+}
+
+.form {
+    width: 100%;
+    height: 50px;
+    margin: 1%;
+    border: none;
+    border-bottom: 1px solid rgb(110, 110, 110);
+}
+
+input[type=text]:focus{
+    background-color: rgb(234, 234, 234);
+    border: none;
+}
+
+.mensaje {
+    height: 100px;
+}
