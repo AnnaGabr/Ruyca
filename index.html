@@ -89,22 +89,24 @@
                         <textarea name="mensaje" class="form mensaje" rows="6" cols="80" placeholder="Mensaje"></textarea>
                     </form>
 -->
-                    <div class="group">
-                        <input type="text" placeholder=" "><span class="highlight"></span><span class="bar"></span>
-                        <label>Nombre</label>
-                    </div>
-                    <div class="group">
-                        <input type="text" placeholder=" "><span class="highlight"></span><span class="bar"></span>
-                        <label>Teléfono</label>
-                    </div>
-                    <div class="group">
-                        <input type="email" placeholder=" "><span class="highlight"></span><span class="bar"></span>
-                        <label>Correo Electrónico</label>
-                    </div>
-                    <div class="group">
-                        <textarea name="mensaje" class="mensaje" rows="4" cols="50" placeholder="Mensaje"></textarea>
-                    </div>
-                    <button class="send">Enviar</button>
+                    <form action="email.php" method="post">
+                        <div class="group">
+                            <input type="text" placeholder=" " name="nombre"><span class="highlight"></span><span class="bar"></span>
+                            <label>Nombre</label>
+                        </div>
+                        <div class="group">
+                            <input type="text" placeholder=" " name="tel" required><span class="highlight"></span><span class="bar"></span>
+                            <label>Teléfono</label>
+                        </div>
+                        <div class="group">
+                            <input type="email" placeholder=" " name="mail" required><span class="highlight"></span><span class="bar"></span>
+                            <label>Correo Electrónico</label>
+                        </div>
+                        <div class="group">
+                            <textarea name="mensaje" class="mensaje" rows="4" cols="50" placeholder="Mensaje" name="mensaje" required></textarea>
+                        </div>
+                        <button type="submit" class="send">Enviar</button>
+                    </form>
                     <center><p class="letrachiquita">Este sitio está protegido por reCAPTCHA y aplican las <a href="https://policies.google.com/privacy">Política de privacidad</a> y los <a href="https://policies.google.com/terms">Términos de servicio</a> de Google.</p></center>
                 </div>
                 <div class="secondColumn column">
