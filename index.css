@@ -173,7 +173,7 @@ ul {
 .letrachiquita {
     font-size: 12px;
     color:var(--secondary-gray);
-    line-height: 20px;
+    line-height: 120%;
     padding: 10px;
 }
 
@@ -205,6 +205,10 @@ ul {
     letter-spacing: 1px;
 }
 
+.contactanos {
+    margin-bottom: 4%;
+}
+
 .mapa {
     width: 100%;
 }
@@ -213,6 +217,7 @@ ul {
     width: 100%;
     background-image: url('windowpic1.jpg');
     opacity: 50%;
+    padding-top: 4%;
 }
 
 .comentariosSection h1 {
@@ -235,6 +240,7 @@ ul {
     justify-content: center; 
     margin: 30px;
     margin-bottom: 100px;
+    font-size: larger;
 }
 
 footer {
