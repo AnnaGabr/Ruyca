@@ -28,23 +28,29 @@ require 'email/SMTP.php';
 //Create an instance; passing `true` enables exceptions
 $mail = new PHPMailer(true);
 
+$nombre = $_POST['nombre'];
+$email = $_POST['mail'];
+$telefono = $_POST['tel'];
+$mensaje= $_POST['mensaje'];
+
 try {
     //Server settings
     $mail->SMTPDebug = SMTP::DEBUG_SERVER;                      //Enable verbose debug output
     $mail->isSMTP();                                            //Send using SMTP
     // Se busca en internet lo que se necesita, ej smtp hotmail da smtp.live.com
     // para modificar con hosting: https://www.youtube.com/watch?v=qj-Cn8Cde10
-    $mail->Host       = ;                       //Set the SMTP server to send through
+    $mail->Host       = 'p3plzcpnl491601.prod.phx3.secureserver.net';                       //Set the SMTP server to send through
     $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
-    $mail->Username   = ;         //SMTP username
-    $mail->Password   = ;                           //SMTP password
-    $mail->SMTPSecure = ; //PHPMailer::ENCRYPTION_SMTPS;            //Enable implicit TLS encryption
-    $mail->Port       = ;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
+    $mail->Username   = 'prueba@annagabrielasalazar.com';         //SMTP username
+    $mail->Password   = '123456';                           //SMTP password
+    $mail->SMTPSecure = 'ssl'; //PHPMailer::ENCRYPTION_SMTPS;            //Enable implicit TLS encryption
+    $mail->Port       = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
 
     //Recipients
-    $mail->setFrom('', 'UsuarioPagWeb');
-    $mail->addAddress('');        //Add a recipient
-    $mail->addAddress('');               //Name is optional
+    $mail->setFrom('prueba@annagabrielasalazar.com', 'UsuarioPagWeb');
+    $mail->addAddress('ruycaindustriaspvc@gmail.com');        //Add a recipient
+    $mail->addAddress('comercial@ruycapvc.com');
+    $mail->addAddress('prueba@annagabrielasalazar.com');               //Name is optional
 
     /*
     //Attachments
@@ -55,12 +61,12 @@ try {
     //Content
 //    $mail->isHTML(true);  
     $mail->isHTML(false);                                  //Set email format to HTML
-    $mail->Subject = 'Prueba Email';
-    $mail->Body    = 'Correo de prueba desde el hosting';
+    $mail->Subject = 'Mensaje Página Web';
+    $mail->Body    = 'De ' . $nombre . '(correo: ' . $email . ', teléfono: ' . $telefono . ') Mensaje: ' . $mensaje;
 
     $mail->send();
-    echo 'Message has been sent';
+    echo "<script>setTimeout(\"location.href='home.html'\",500)</script>";
 } catch (Exception $e) {
-    echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+    echo "<script>alert(Message could not be sent. Mailer Error: {$mail->ErrorInfo})</script>";
 }
 ?>
