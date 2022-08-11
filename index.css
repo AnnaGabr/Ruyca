@@ -33,6 +33,7 @@ body {
     height: 150px;
     margin-right: 70px;
     font-weight: bold;
+    letter-spacing: 5px;
 }
 
 .bannerMenu button:hover{
@@ -50,6 +51,7 @@ body {
 
 .titleHome h1 {
     font-size: 40px;
+    letter-spacing: 8px;
 }
 
 .titleHome h3{
@@ -66,6 +68,7 @@ body {
 
 .section h1 {
     font-family: 'Poppins', sans-serif;
+    letter-spacing: 6px;
 }
 
 .firstSection {
@@ -80,6 +83,10 @@ body {
     padding: 1%;
 }
 
+.column h4 {
+    letter-spacing: 5px;
+}
+
 .firstColumn {
     max-width: 50%;
 }
@@ -90,7 +97,7 @@ ul {
 
 .secondColumn {
     max-width: 50%;
-    margin-left: 5%;
+    padding-left: 5%;
 }
 
 .beneficios {
@@ -114,6 +121,10 @@ ul {
     margin: 5%;
 }
 
+.card h3 {
+    letter-spacing: 5px;
+}
+
 .firstCard .text {
     margin-left: 4%;
 }
@@ -122,19 +133,75 @@ ul {
     margin-right: 4%;
 }
 
-.form {
+
+.mensaje {
     width: 100%;
     height: 50px;
     margin: 1%;
     border: none;
-    border-bottom: 1px solid rgb(110, 110, 110);
-}
-
-input[type=text]:focus{
-    background-color: rgb(234, 234, 234);
-    border: none;
-}
-
-.mensaje {
+    border-bottom: 1px solid #757575;
     height: 100px;
+}
+
+/* https://codepen.io/joshadamous/pen/yyyqJZ : */
+
+.group { 
+	position: relative; 
+	margin-bottom: 45px; 
+}
+
+input {
+	font-size: 18px;
+	padding: 10px 10px 10px 5px;
+	-webkit-appearance: none;
+	display: block;
+	color: #636363;
+	width: 100%;
+	border: none;
+	border-radius: 0;
+	border-bottom: 1px solid #757575;
+}
+
+input:focus { 
+    outline: none; 
+    background-color: #d8d8d8;
+}
+
+.mensaje:focus { 
+    outline: none; 
+    background-color: #d8d8d8;
+}
+
+label {
+	color: #999; 
+	font-size: 18px;
+	font-weight: normal;
+	position: absolute;
+	pointer-events: none;
+	left: 5px;
+	top: 10px;
+	transition: all 0.2s ease;
+}
+
+input:focus ~ label, input:not(:placeholder-shown) ~ label {
+	top: -28px;
+    transform: scale(.75); left: -2px;
+	/* font-size: 14px; */
+	color: #b14747;
+}
+
+input:focus ~ .bar:before, input:focus ~ .bar:after { width: 50%; }
+
+.highlight {
+	position: absolute;
+	height: 60%; 
+	width: 100px; 
+	top: 25%; 
+	left: 0;
+	pointer-events: none;
+	opacity: 0.5;
+}
+
+input:focus ~ .highlight {
+	animation: inputHighlighter 0.3s ease;
 }
