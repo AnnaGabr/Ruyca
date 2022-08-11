@@ -39,18 +39,18 @@ try {
     $mail->isSMTP();                                            //Send using SMTP
     // Se busca en internet lo que se necesita, ej smtp hotmail da smtp.live.com
     // para modificar con hosting: https://www.youtube.com/watch?v=qj-Cn8Cde10
-    $mail->Host       = 'p3plzcpnl491601.prod.phx3.secureserver.net';                       //Set the SMTP server to send through
+    $mail->Host       = '';                       //Set the SMTP server to send through
     $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
-    $mail->Username   = 'prueba@annagabrielasalazar.com';         //SMTP username
-    $mail->Password   = '123456';                           //SMTP password
-    $mail->SMTPSecure = 'ssl'; //PHPMailer::ENCRYPTION_SMTPS;            //Enable implicit TLS encryption
-    $mail->Port       = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
+    $mail->Username   = '';         //SMTP username
+    $mail->Password   = '';                           //SMTP password
+    $mail->SMTPSecure = ''; //PHPMailer::ENCRYPTION_SMTPS;            //Enable implicit TLS encryption
+    $mail->Port       = ;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
 
     //Recipients
-    $mail->setFrom('prueba@annagabrielasalazar.com', 'UsuarioPagWeb');
-    $mail->addAddress('ruycaindustriaspvc@gmail.com');        //Add a recipient
-    $mail->addAddress('comercial@ruycapvc.com');
-    $mail->addAddress('prueba@annagabrielasalazar.com');               //Name is optional
+    $mail->setFrom('', 'UsuarioPagWeb');
+    $mail->addAddress('');        //Add a recipient
+    $mail->addAddress('');
+    $mail->addAddress('');               //Name is optional
 
     /*
     //Attachments
