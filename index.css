@@ -1,4 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Lora&family=Poppins&family=Roboto&display=swap');
+/*@import url('https://fonts.googleapis.com/css2?family=Lora&family=Poppins&family=Roboto&display=swap');*/
+@import url('https://fonts.googleapis.com/css2?family=Lora&family=Martel:wght@200&family=Poppins&family=Raleway:wght@100&family=Roboto&display=swap');
+
+:root{
+    --main-secondary-color: #b14747;
+    --second-secondary-color: #692e2e;
+}
 
 body {
     margin: 0;
@@ -85,6 +91,7 @@ body {
 
 .column h4 {
     letter-spacing: 5px;
+    font-family: 'Martel', serif;
 }
 
 .firstColumn {
@@ -123,6 +130,8 @@ ul {
 
 .card h3 {
     letter-spacing: 5px;
+    font-size: 40px;
+    font-family: 'Martel', serif;
 }
 
 .firstCard .text {
@@ -141,6 +150,50 @@ ul {
     border: none;
     border-bottom: 1px solid #757575;
     height: 100px;
+}
+
+.send {
+    border: 3px solid black;
+    border-radius: 30px;
+    width: 100%;
+    padding: 20px;
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.send:hover {
+    transition: all 0.5s ease;
+    background-color: black;
+    color: white;
+}
+
+.whatsapp img {
+    width: 24px;
+    margin-right: 15px;
+}
+
+.whatsapp {
+    background-color: #414141;
+    border: none;
+    padding: 20px 30px 20px 20px;
+    color: white;
+    font-weight: bold;
+    border-radius: 40px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.column a {
+    color: var(--main-secondary-color);
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+.column a:hover {
+    color: var(--second-secondary-color);
+    text-decoration: none;
+    letter-spacing: 1px;
 }
 
 /* https://codepen.io/joshadamous/pen/yyyqJZ : */
@@ -187,7 +240,7 @@ input:focus ~ label, input:not(:placeholder-shown) ~ label {
 	top: -28px;
     transform: scale(.75); left: -2px;
 	/* font-size: 14px; */
-	color: #b14747;
+	color: var(--main-secondary-color);
 }
 
 input:focus ~ .bar:before, input:focus ~ .bar:after { width: 50%; }
